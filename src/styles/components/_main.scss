@@ -1,0 +1,49 @@
+.main-section {
+	display: flex;
+	margin-top: 100px;
+	margin-bottom: $gutter;
+
+	@include from($small) {
+		flex-direction: column;
+	}
+
+	&__item {
+		height: 300px;
+    width: 100%;
+    background: $bg-color;
+		border: 1px solid $border-color;
+		margin-right: $gutter;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@include from($small) {
+			margin: 0;
+		}
+	}
+}
+
+.secondary-section {
+	display: flex;
+	margin-bottom: $gutter;
+
+	@include from($small) {
+		flex-direction: column;
+	}
+
+	&__item { 
+    height: 120px;
+    background-color: $bg-color;
+		border: 1px solid $border-color;
+		width: calc((100% / 3) - (40px / 3)); 
+		margin-right: 20px;
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@include from($small) {
+			margin: 0;
+			width: 100%;
+		}
+	}
+}

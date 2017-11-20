@@ -1,0 +1,23 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run lint && node-sass src/styles/index.scss public/style.css --output-style compressed",
+    "lint": "stylelint 'src/styles/**/*.scss' --config .stylelintrc --syntax scss",
+    "start": "npm run build -- -w --source-map true",
+    "precommit": "npm run lint",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "node-sass": "^4.7.1",
+    "stylelint": "^8.2.0",
+    "stylelint-config-recommended-scss": "^2.0.0",
+    "stylelint-scss": "^2.1.0"
+  }
+}

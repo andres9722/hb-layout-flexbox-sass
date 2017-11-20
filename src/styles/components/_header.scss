@@ -1,0 +1,26 @@
+.main-header {
+	height: 80px;
+	background: $bg-color;    
+	border: 1px solid $border-color;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%);
+
+	&__title {
+		color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: .8;
+		text-shadow: 1px 0 0 $border-color;
+		font: {
+			family: $font-text;
+			size: 2em;
+		}
+	}
+}
+
+
